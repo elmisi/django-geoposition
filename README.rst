@@ -1,7 +1,7 @@
 ==================
 django-geoposition
 ==================
-A fork of `django-geoposition`_.
+A fork of `django-geoposition 2`_. This fixes some bugs that appear when using the latest django version (3.0.4 at the time that this was written).
 
 A model field that can hold a geoposition (latitude/longitude), and corresponding admin/form widget.
 
@@ -15,7 +15,7 @@ A model field that can hold a geoposition (latitude/longitude), and correspondin
 Prerequisites
 -------------
 
-Please use from version 0.3.4. Previous versions had several unsolved issues by their original maintainers. django-geoposition requires Django 1.8 or greater.
+Please use from version 3.0 or later.
 
 
 Installation
@@ -147,6 +147,7 @@ License
 
 
 .. _django-geoposition: https://github.com/philippbosch/django-geoposition
+..  django-geoposition 2: https://github.com/imdario/django-geoposition
 .. _PyPI: http://pypi.python.org/pypi/django-geoposition
 .. _Google Maps: http://code.google.com/apis/maps/documentation/javascript/
 .. |geoposition-widget-admin| image:: docs/images/geoposition-widget-admin.jpg
