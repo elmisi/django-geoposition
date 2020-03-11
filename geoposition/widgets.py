@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 import json
 
 from django import forms
+from django.forms.widgets import Media
 import six
 from django.utils.translation import ugettext_lazy as _
 
@@ -35,7 +36,8 @@ class GeopositionWidget(forms.MultiWidget):
 
     def __init__(self, attrs=None):
         self.Media.js = self.backends[settings.BACKEND]['js']
-        self.Media.css['all'] = self.backends[settings.BACKEND]['css'] + self.Media.css['all']
+        self.Media.css['all'] = Media.merge(self.backends[settings.BACKEND]['css'], self.Media.css['all'])
+
         widgets = (
             forms.TextInput(),
             forms.TextInput(),
